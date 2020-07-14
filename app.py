@@ -171,7 +171,8 @@ def update_timeseriesgraph(currentstep):
     # xdata = np.arange(len(atomsremaining)).reshape(len(atomsremaining), 1)
     xdata = np.arange(0, currentstep + 1, 1)
     ydata = atomsremaining[range(0, len(atomsremaining))]
-    print('in slider',ydata)
+    print('in slider ydata',ydata)
+    print('in slider atomsremaining',atomsremaining)
     numatoms = atomsremaining[0]
     numremaining = atomsremaining[currentstep]
     numdecayed = numatoms - numremaining
