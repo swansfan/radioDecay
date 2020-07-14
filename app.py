@@ -21,17 +21,16 @@ maxTimeSteps = 20
 # initialise an array for defining the marker colours for decayed/undecayed atoms for each timestep
 marker_colour = np.empty((maxX * maxY, maxTimeSteps + 1), dtype=np.dtype('U7'))
 
+# Run random decay
+atoms, atomsdecayed, atomsremaining = decay.simdecay(maxX, maxY, maxTimeSteps, decayConstant)
+print('original',atomsremaining)
 
 external_stylesheets = [dbc.themes.FLATLY, 'assets/styles.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 # app = dash.Dash(__name__, external_stylesheets=external_stylesheets, prevent_initial_callbacks=True)
 server = app.server
-app.title='Modelling RadioactiveDecay'
-
-# Run random decay
-atoms, atomsdecayed, atomsremaining = decay.simdecay(maxX, maxY, maxTimeSteps, decayConstant)
-print('original',atomsremaining)
+app.title='Modelling Radioactive Decay'
 
 body = html.Div([
     dbc.Row([
