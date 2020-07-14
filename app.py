@@ -28,6 +28,8 @@ external_stylesheets = [dbc.themes.FLATLY, 'assets/styles.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 # app = dash.Dash(__name__, external_stylesheets=external_stylesheets, prevent_initial_callbacks=True)
+server = app.server
+app.title=tabtitle
 
 body = html.Div([
     dbc.Row([
@@ -259,4 +261,4 @@ def update_atom_box(currentstep):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server()
