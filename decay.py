@@ -29,6 +29,6 @@ def simdecay(maxx_atoms, maxy_atoms, maxsteps, decay_constant):
 # function to calculate analytical solution for exponential decay
 def calcdecay(maxx_atoms, maxy_atoms, maxsteps, decay_constant):
     calctime = np.arange(0., float(maxsteps + 1), 0.1)
-    calcdecay = float((maxx_atoms * maxy_atoms)) * np.exp(-decay_constant * time)
+    calcdecay = float((maxx_atoms * maxy_atoms)) * np.exp(-decay_constant * calctime)
     return calctime, calcdecay
 
