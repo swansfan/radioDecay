@@ -23,7 +23,6 @@ marker_colour = np.empty((maxX * maxY, maxTimeSteps + 1), dtype=np.dtype('U7'))
 
 # Run random decay
 atoms, atomsdecayed, atomsremaining = decay.simdecay(maxX, maxY, maxTimeSteps, decayConstant)
-print('original',atomsremaining)
 
 external_stylesheets = [dbc.themes.FLATLY, 'assets/styles.css']
 
@@ -171,8 +170,6 @@ def update_timeseriesgraph(currentstep):
     # xdata = np.arange(len(atomsremaining)).reshape(len(atomsremaining), 1)
     xdata = np.arange(0, currentstep + 1, 1)
     ydata = atomsremaining[range(0, len(atomsremaining))]
-    print('in slider ydata',ydata)
-    print('in slider atomsremaining',atomsremaining)
     numatoms = atomsremaining[0]
     numremaining = atomsremaining[currentstep]
     numdecayed = numatoms - numremaining
@@ -226,7 +223,6 @@ def update_atom_box(currentstep):
         mode='markers',
         marker=dict(size=12, color=(marker_colour[:, currentstep]))
     ))
-    # print(xdata, ydata)
     updatelayout = (go.Layout(
         #title='Atoms',
         xaxis={'ticks': '', 'showticklabels': False,
