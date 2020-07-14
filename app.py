@@ -252,7 +252,7 @@ def update_atom_box(currentstep):
                  'xref': 'paper', 'yref': 'paper', 'font_size': 14},
                      {'text': 'Undecayed Atom', 'x': 0.24, 'y': -0.060, 'showarrow': False,
                       'xref': 'paper', 'yref': 'paper'},
-                {'text': 'Decayed Atom', 'x': 0.82, 'y': -0.060, 'showarrow': False,
+                {'text': 'Decayed Atom', 'x': 0.84, 'y': -0.060, 'showarrow': False,
                  'xref': 'paper', 'yref': 'paper'}],
         margin={'t': 0, 'r': 15, 'b': 40, 'l': 10}
     ))
