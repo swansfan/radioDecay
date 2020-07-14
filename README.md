@@ -1,6 +1,6 @@
 # Dash app to model radioactive decay
 
-This was my first attempt at writing a Dash app coming from a background with no prior experience using python, HTML and CSS. 
+This was my first attempt at writing a Dash app with not much prior experience using python, HTML and CSS. 
 You can view the finished app on [Heroku](https://radiodecay.herokuapp.com/).
  
 I have made use of resources and ideas from the following:
